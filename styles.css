@@ -1,0 +1,114 @@
+/* ZhangSan Zhangsan */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+#navbar ul li {
+    padding: 0 15px;
+}
+
+#navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+.MainBox{
+    display: grid;
+}
+#products{
+     display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  /* grid-template-rows: 33.33% 33.33% 33.33%; */
+}
+.product {
+    border: 1px solid #ddd;
+    width: 400px;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+#cart {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 300px;
+}
+
+#cart h3 {
+    margin-top: 0;
+}
+
+#cartItems {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #555;
+}
+
+

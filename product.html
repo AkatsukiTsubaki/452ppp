@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliens Legends</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo">Aliens Legends </div>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="product.html">product</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="blog.html">blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="MainBox">
+            <section id="products">
+                <div class="product" id="product1">
+                    <img src="product1.jpg" alt="product1">
+                    <h2>product1</h2>
+                    <p>Sale：$1000</p>
+                    <button onclick="addToCart('product1')">addToCart</button>
+                </div>
+                <div class="product" id="product2">
+                    <img src="product2.jpg" alt="product2">
+                    <h2>product2</h2>
+                    <p>Sale：$1050</p>
+                    <button onclick="addToCart('product2')">addToCart</button>
+                </div>
+                <div class="product" id="product3">
+                    <img src="product3.jpg" alt="product3">
+                    <h2>product3</h2>
+                    <p>Sale：$1000</p>
+                    <button onclick="addToCart('product3')">addToCart</button>
+                </div>
+                <div class="product" id="product4">
+                    <img src="product1.jpg" alt="产品1">
+                    <h2>product4</h2>
+                    <p>Sale：$1000</p>
+                    <button onclick="addToCart('product4')">addToCart</button>
+                </div>
+                <div class="product" id="product5">
+                    <img src="product1.jpg" alt="产品1">
+                    <h2>product5</h2>
+                    <p>Sale：$1000</p>
+                    <button onclick="addToCart('product5')">addToCart</button>
+                </div>
+                <div class="product" id="product6">
+                    <img src="product1.jpg" alt="产品1">
+                    <h2>product6</h2>
+                    <p>Sale：$1000</p>
+                    <button onclick="addToCart('product6')">addToCart</button>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+    <footer>
+        <p>Belongs to &copy; 2024 Arthur Xu Xiyan</p>
+    </footer>
+    <div id="cart" style="display:none;">
+        <h3>shopping market</h3>
+        <ul id="cartItems"></ul>
+        <button onclick="checkout()">check out</output></button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function addToCart(productId) {
+        var cart = document.getElementById('cart');
+        var cartItems = document.getElementById('cartItems');
+        var product = document.getElementById(productId);
+        var item = document.createElement('li');
+        item.textContent = product.querySelector('h2').textContent + ' - ¥' + product.querySelector('p').textContent;
+        cartItems.appendChild(item);
+        cart.style.display = 'block';
+        console.log(item.textContent);
+    }
+
+    function checkout() {
+        alert('successful！');
+        // 这里可以添加结账的逻辑，比如发送数据到服务器等
+    }
+
+</script>
